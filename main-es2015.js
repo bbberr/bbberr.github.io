@@ -36,6 +36,32 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/date-picker-and-time/date-picker-and-time.component.html":
+/*!****************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/date-picker-and-time/date-picker-and-time.component.html ***!
+  \****************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<ngb-datepicker #dp [(ngModel)]=\"model\" (navigate)=\"date = $event.next\"></ngb-datepicker>\n<ngb-timepicker [(ngModel)]=\"time\" [meridian]=\"meridian\"></ngb-timepicker>\n\n\n<button class=\"btn btn-sm btn-outline-primary mr-2\" (click)=\"selectToday()\">Select Today</button>\n<button class=\"btn btn-sm btn-outline-primary mr-2\" (click)=\"dp.navigateTo()\">To current month</button>\n<button class=\"btn btn-sm btn-outline-primary mr-2\" (click)=\"dp.navigateTo({year: 2013, month: 2})\">To Feb 2013</button>\n\n<pre>Month: {{ date.month }}.{{ date.year }}</pre>\n<pre>Model: {{ model | json }}</pre>\n\n<button class=\"btn btn-sm btn-outline-{{meridian ? 'success' : 'danger'}}\" (click)=\"toggleMeridian()\">\n  Meridian - {{meridian ? \"ON\" : \"OFF\"}}\n</button>\n\n<pre>Selected time: {{time | json}}</pre>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/homepage/homepage.component.html":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/homepage/homepage.component.html ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<body>\n  <!-- START:上方：靠左：Logo -->\n  <div class=\"menuLogo\">\n    <img [src]=\"imagePath\">\n  </div>\n  <!-- END:上方：靠左：Logo -->\n\n\n  <!-- START:上方：靠右：下拉選單 -->\n  <div class=\"menuList\">\n    <ng-container *ngFor=\"let menuItem of modulesList\">\n      <ng-container *ngIf=\"!menuItem.children\">\n        <a class=\"nav-link\">\n          <span class=\"icon fa\" [ngClass]=\"menuItem.icon\"></span>\n          <span class=\"text-holder\">{{menuItem.label}}</span>\n        </a>\n      </ng-container>\n      <ng-container *ngIf=\"menuItem.children.length > 0\">\n        <button mat-button [matMenuTriggerFor]=\"levelOne\" #levelOneTrigger=\"matMenuTrigger\">\n          <span class=\"icon fa\" [ngClass]=\"menuItem.icon\"></span>\n          <span>{{menuItem.label}}\n            <i class=\"fa fa-chevron-down\"></i>\n          </span>\n        </button>\n\n        <mat-menu #levelOne=\"matMenu\" direction=\"down\" yPosition=\"below\">\n          <span>\n            <ng-container *ngFor=\"let childL1 of menuItem.children\">\n              <li class=\"p-0\" *ngIf=\"!childL1.children\" mat-menu-item>\n                <a class=\"nav-link\">{{childL1.label}}\n                  <i *ngIf=\"childL1.icon\" [ngClass]=\"childL1.icon\"></i>\n                </a>\n              </li>\n              <ng-container *ngIf=\"childL1.children && childL1.children.length > 0\">\n                <li mat-menu-item [matMenuTriggerFor]=\"levelTwo\">\n                  <span class=\"icon fa\" [ngClass]=\"childL1.icon\"></span>\n                  <span>{{childL1.label}}</span>\n                </li>\n\n                <mat-menu #levelTwo=\"matMenu\">\n                  <ng-container *ngFor=\"let childL2 of childL1.children\">\n                    <li class=\"p-0\" mat-menu-item>\n                      <a class=\"nav-link\">{{childL2.label}}\n                        <i *ngIf=\"childL2.icon\" [ngClass]=\"childL2.icon\"></i>\n                      </a>\n                    </li>\n                  </ng-container>\n                </mat-menu>\n              </ng-container>\n            </ng-container>\n          </span>\n        </mat-menu>\n      </ng-container>\n    </ng-container>\n  </div>\n  <!-- END:上方：靠右：下拉選單 -->\n\n  <!-- START: header: HERO-IMAGE -->\n  <div class=\"heroImage\">\n    <img [src]=\"getHero()\">\n  </div>\n  <!-- END: header: HERO-IMAGE -->\n\n  <!-- START : Products banner -->\n  <div style=\"padding-left: 5%;\">\n    <h3>Products</h3>\n    <mat-grid-list cols=\"2\" class=\"matGridListProduct\">\n      <mat-grid-tile>\n        <mat-card style=\"width: 95%;max-width: 95%;\">\n          <img mat-card-image [src]=\"productPath1\" class=\"matCardImg\" rowspan=\"1\">\n          <mat-card-header style=\"text-align: left;\">\n            <mat-card-title style=\"font-weight: 400 !important ; color:rgb(196, 33, 33) ;\">Gloves</mat-card-title>\n            <mat-card-subtitle>From design to performance, color to construction or fit to feel.</mat-card-subtitle>\n            <mat-card-subtitle>from £40</mat-card-subtitle>\n          </mat-card-header>\n          <mat-card-actions>\n            <button mat-button>Buy Now!</button>\n          </mat-card-actions>\n        </mat-card>\n      </mat-grid-tile>\n      <mat-grid-tile>\n        <mat-card style=\"width: 95%;max-width: 95%;\">\n          <img mat-card-image [src]=\"productPath2\" class=\"matCardImg\" rowspan=\"1\">\n          <mat-card-header style=\"text-align: left;\">\n            <mat-card-title style=\"font-weight: 400 !important ; color:rgb(196, 33, 33) ;\">Protectives</mat-card-title>\n            <mat-card-subtitle>“Protect yourselves at all times”.</mat-card-subtitle>\n            <mat-card-subtitle>from £69</mat-card-subtitle>\n          </mat-card-header>\n          <mat-card-actions>\n            <button mat-button>Buy Now!</button>\n          </mat-card-actions>\n        </mat-card>\n      </mat-grid-tile>\n    </mat-grid-list>\n    <!-- END : Products banner -->\n    <br>\n    <!-- START : Freebies banner -->\n    <div>\n      <h3>Freebies</h3>\n      <div class=\"productDiv\">\n        <!-- 商品圖片 -->\n        <div style=\"text-align: center;\">\n          <img [src]=\"freebies1\">\n        </div>\n        <!-- 商品標題 -->\n        <div class=\"productTitle\">\n          <a>Keyring</a>\n        </div>\n        <!-- 商品副標題 -->\n        <div>\n          <p>Incredible, flexible industrial rubber keyring is die-cut and stamped for authenticity and quality.</p>\n        </div>\n      </div>\n\n      <div class=\"productDiv\">\n        <!-- 商品圖片 -->\n        <div style=\"text-align: center;\">\n          <img [src]=\"freebies2\">\n        </div>\n        <!-- 商品標題 -->\n        <div class=\"productTitle\">\n          <a>Rope skipping</a>\n        </div>\n        <!-- 商品副標題 -->\n        <div>\n          <p>Super fast ball bearing swivels provide tangle-free, quick action.Weighted handles can be removed, allowing\n            you to vary your workouts.</p>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"productDiv\">\n      <!-- 商品圖片 -->\n      <div style=\"text-align: center;\">\n        <img [src]=\"freebies3\">\n      </div>\n      <!-- 商品標題 -->\n      <div class=\"productTitle\">\n        <a>Hand wraps</a>\n      </div>\n      <!-- 商品副標題 -->\n      <div>\n        <p>Just like fighters vary in size, weight and the amount of protection you need, what’s also unique is the size\n          of their hands.</p>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"productDiv\">\n    <!-- 商品圖片 -->\n    <div style=\"text-align: center;\">\n      <img [src]=\"freebies4\">\n    </div>\n    <!-- 商品標題 -->\n    <div class=\"productTitle\">\n      <a>Puzzle Sports Mat</a>\n    </div>\n    <!-- 商品副標題 -->\n    <div>\n      <p>Ideal and most convenient option for lining gym floors, schools, studios, workout and exercise rooms, weight\n        training areas, around heavy bags, boxing rings, cages...</p>\n    </div>\n\n  </div>\n  <!-- END : Freebies banner -->\n\n\n  <div style='clear:both;'></div>\n  <div style=\"background-color:  #e2e2e2;\">\n    <div style=\"height: 40px;\"></div>\n    <div style=\"text-align:center; font-style: italic;\">\n      Copyright © 2020 Boxing Lin Inc\n    </div>\n    <div style=\"height: 20px;\"></div>\n  </div>\n</body>\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/search-bar/search-bar.component.html":
 /*!********************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/search-bar/search-bar.component.html ***!
@@ -45,7 +71,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<mat-card class=\"layout\">\n<div>\n  <label id=\"example-radio-group-label\">請選擇條件：</label>\n</div>\n<div>\n  <!--<button mat-button [matMenuTriggerFor]=\"menu\">菜單類型</button>\n  <mat-menu #menu=\"matMenu\">\n  <button mat-menu-item [(ngModel)]=\"menuCode\" value=1>無菜單</button>\n  <button mat-menu-item [(ngModel)]=\"menuCode\" value=2>傳統</button>\n  <button mat-menu-item [(ngModel)]=\"menuCode\" value=3>甜不辣</button>\n  <button mat-menu-item [(ngModel)]=\"menuCode\" value=4>鐵板燒</button>\n  <button mat-menu-item [(ngModel)]=\"menuCode\" value=5>鐵板燒</button>\n  <button mat-menu-item [(ngModel)]=\"menuCode\" value=6>割烹</button>\n  <button mat-menu-item [(ngModel)]=\"menuCode\" value=7>和牛</button>\n  <button mat-menu-item [(ngModel)]=\"menuCode\" value=8>懷石料理</button>\n  <button mat-menu-item [(ngModel)]=\"menuCode\" value=9>壽司</button>\n</mat-menu>\n-->\n<form [formGroup]=\"options\" >\n<mat-form-field >\n  <mat-select placeholder=\"菜單類型\" formControlName=\"menuCodeControl\">\n    <mat-option value=1>無菜單</mat-option>\n    <mat-option value=2>傳統</mat-option>\n    <mat-option value=3>甜不辣</mat-option>\n    <mat-option value=4>鐵板燒</mat-option>\n    <mat-option value=5>創新</mat-option>\n    <mat-option value=6>割烹</mat-option>\n    <mat-option value=7>和牛</mat-option>\n    <mat-option value=8>懷石料理</mat-option>\n    <mat-option value=9>壽司</mat-option>\n  </mat-select>\n</mat-form-field>\n</form>\n<div>Your favorite prefer menuCode is: {{options.controls['menuCodeControl'].value}}</div>\n  <!--\n</div>\n<div>\n\n  <mat-radio-group aria-labelledby=\"example-radio-group-label\" class=\"example-radio-group\"\n    [(ngModel)]=\"preferConditions\">\n    <mat-radio-button class=\"example-radio-button\" *ngFor=\"let condition of conditions\" [value]=\"condition\">\n      {{condition}}\n    </mat-radio-button>\n  </mat-radio-group>\n-->\n  <section >\n    <mat-checkbox class=\"example-margin\" [(ngModel)]=\"parking\">停車</mat-checkbox>\n    <mat-checkbox class=\"example-margin\" [(ngModel)]=\"deliver\">外送</mat-checkbox>\n    <mat-checkbox class=\"example-margin\" [(ngModel)]=\"preFee\">先繳訂金</mat-checkbox>\n  </section>\n</div>\n\n\n<button mat-button *ngIf=\"value\" matSuffix mat-icon-button aria-label=\"Clear\" (click)=\"value=preferConditions\">\n  <mat-icon>search</mat-icon>\n</button>\n\n<div>Your favorite prefer parking is: {{parking}}</div>\n<div>Your favorite prefer deliver is: {{deliver}}</div>\n<div>Your favorite prefer preFee is: {{preFee}}</div>\n\n</mat-card>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div id=\"searchBarLayout\">\n  <mat-card>\n    <label>請選擇條件：</label>\n    <form [formGroup]=\"options\">\n      <mat-form-field>\n        <mat-select placeholder=\"菜單類型\" formControlName=\"menuCodeControl\">\n          <mat-option value=1>無菜單</mat-option>\n          <mat-option value=2>傳統</mat-option>\n          <mat-option value=3>甜不辣</mat-option>\n          <mat-option value=4>鐵板燒</mat-option>\n          <mat-option value=5>創新</mat-option>\n          <mat-option value=6>割烹</mat-option>\n          <mat-option value=7>和牛</mat-option>\n          <mat-option value=8>懷石料理</mat-option>\n          <mat-option value=9>壽司</mat-option>\n        </mat-select>\n      </mat-form-field>\n    </form>\n  </mat-card>\n  <mat-card id=\"searchBarOtherConditionsLayout\">\n    <section>\n      <mat-checkbox [(ngModel)]=\"parking\">停車</mat-checkbox>\n      <mat-checkbox [(ngModel)]=\"deliver\">外送</mat-checkbox>\n      <mat-checkbox [(ngModel)]=\"preFee\">先繳訂金</mat-checkbox>\n    </section>\n  </mat-card>\n  <mat-card id=\"searchBarOpenDialogLayout\">\n    <mat-icon (click)=\"openDateTimeDialog()\">calendar_today</mat-icon>\n  </mat-card>\n\n    <div>\n      <button mat-button [disabled]=\"!value\" matSuffix mat-icon-button aria-label=\"Clear\" (click)=\"this.options\">\n        <mat-icon>search</mat-icon>\n      </button>\n    </div>\n</div>\n<hr>\n  <div>favorite prefer menuCode is: {{options.controls['menuCodeControl'].value}}</div>\n  <div>Your favorite prefer parking is: {{parking}}</div>\n  <div>Your favorite prefer deliver is: {{deliver}}</div>\n  <div>Your favorite prefer preFee is: {{preFee}}</div>\n\n  <form style=\"border: black 2px;\">\n    <mat-form-field>\n      <input style=\"cursor: pointer;\" matInput (click)=\"openDateTimeDialog()\">\n    </mat-form-field>\n  </form>\n\n");
 
 /***/ }),
 
@@ -291,19 +317,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _search_bar_search_bar_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./search-bar/search-bar.component */ "./src/app/search-bar/search-bar.component.ts");
+/* harmony import */ var _homepage_homepage_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./homepage/homepage.component */ "./src/app/homepage/homepage.component.ts");
 
 
 
 
 const routes = [
-    { path: '', redirectTo: 'searchBar', pathMatch: 'full' },
+    { path: '', redirectTo: 'index', pathMatch: 'full' },
     {
-        path: 'searchBar', component: _search_bar_search_bar_component__WEBPACK_IMPORTED_MODULE_3__["SearchBarComponent"],
-        children: [
-        // { path: 'P1001', component: P1001Component },
-        // { path: 'P1002', component: P1002Component },
-        ]
+        // path: 'searchBar', component: SearchBarComponent,
+        path: 'index', component: _homepage_homepage_component__WEBPACK_IMPORTED_MODULE_3__["HomepageComponent"],
+        children: []
     }
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -380,6 +404,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _search_bar_search_bar_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./search-bar/search-bar.component */ "./src/app/search-bar/search-bar.component.ts");
 /* harmony import */ var _share_material_share_material_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./share-material/share-material.module */ "./src/app/share-material/share-material.module.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
+/* harmony import */ var _date_picker_and_time_date_picker_and_time_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./date-picker-and-time/date-picker-and-time.module */ "./src/app/date-picker-and-time/date-picker-and-time.module.ts");
+/* harmony import */ var _date_picker_and_time_date_picker_and_time_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./date-picker-and-time/date-picker-and-time.component */ "./src/app/date-picker-and-time/date-picker-and-time.component.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+/* harmony import */ var _homepage_homepage_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./homepage/homepage.component */ "./src/app/homepage/homepage.component.ts");
+/* harmony import */ var _homepage_homepage_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./homepage/homepage.module */ "./src/app/homepage/homepage.module.ts");
+
+
+
+
+
+
 
 
 
@@ -393,18 +429,314 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
         declarations: [
             _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-            _search_bar_search_bar_component__WEBPACK_IMPORTED_MODULE_5__["SearchBarComponent"]
+            _search_bar_search_bar_component__WEBPACK_IMPORTED_MODULE_5__["SearchBarComponent"],
+            _date_picker_and_time_date_picker_and_time_component__WEBPACK_IMPORTED_MODULE_9__["DatePickerAndTimeComponent"],
+            _homepage_homepage_component__WEBPACK_IMPORTED_MODULE_11__["HomepageComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
             _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
             _share_material_share_material_module__WEBPACK_IMPORTED_MODULE_6__["ShareMaterialModule"],
+            _date_picker_and_time_date_picker_and_time_module__WEBPACK_IMPORTED_MODULE_8__["DatePickerAndTimeModule"],
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_10__["MatDialogModule"],
+            _homepage_homepage_module__WEBPACK_IMPORTED_MODULE_12__["HomepageModule"]
         ],
         providers: [],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
     })
 ], AppModule);
 
+
+
+/***/ }),
+
+/***/ "./src/app/date-picker-and-time/date-picker-and-time.component.css":
+/*!*************************************************************************!*\
+  !*** ./src/app/date-picker-and-time/date-picker-and-time.component.css ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2RhdGUtcGlja2VyLWFuZC10aW1lL2RhdGUtcGlja2VyLWFuZC10aW1lLmNvbXBvbmVudC5jc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/date-picker-and-time/date-picker-and-time.component.ts":
+/*!************************************************************************!*\
+  !*** ./src/app/date-picker-and-time/date-picker-and-time.component.ts ***!
+  \************************************************************************/
+/*! exports provided: DatePickerAndTimeComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DatePickerAndTimeComponent", function() { return DatePickerAndTimeComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+
+
+
+
+let DatePickerAndTimeComponent = class DatePickerAndTimeComponent {
+    constructor(calendar, dialogRef, data) {
+        this.calendar = calendar;
+        this.dialogRef = dialogRef;
+        this.data = data;
+        this.time = { hour: 0, minute: 0 };
+        this.meridian = true;
+    }
+    ngOnInit() {
+    }
+    selectToday() {
+        this.model = this.calendar.getToday();
+    }
+    toggleMeridian() {
+        this.meridian = !this.meridian;
+    }
+    onNoClick() {
+        this.dialogRef.close();
+    }
+};
+DatePickerAndTimeComponent.ctorParameters = () => [
+    { type: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbCalendar"] },
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatDialogRef"] },
+    { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_material__WEBPACK_IMPORTED_MODULE_3__["MAT_DIALOG_DATA"],] }] }
+];
+DatePickerAndTimeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-date-picker-and-time',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./date-picker-and-time.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/date-picker-and-time/date-picker-and-time.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./date-picker-and-time.component.css */ "./src/app/date-picker-and-time/date-picker-and-time.component.css")).default]
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_3__["MAT_DIALOG_DATA"]))
+], DatePickerAndTimeComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/date-picker-and-time/date-picker-and-time.module.ts":
+/*!*********************************************************************!*\
+  !*** ./src/app/date-picker-and-time/date-picker-and-time.module.ts ***!
+  \*********************************************************************/
+/*! exports provided: DatePickerAndTimeModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DatePickerAndTimeModule", function() { return DatePickerAndTimeModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/* harmony import */ var _share_material_share_material_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../share-material/share-material.module */ "./src/app/share-material/share-material.module.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _date_picker_and_time_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./date-picker-and-time.component */ "./src/app/date-picker-and-time/date-picker-and-time.component.ts");
+
+
+
+
+
+
+
+
+let DatePickerAndTimeModule = class DatePickerAndTimeModule {
+};
+DatePickerAndTimeModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        declarations: [],
+        imports: [
+            _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+            _share_material_share_material_module__WEBPACK_IMPORTED_MODULE_4__["ShareMaterialModule"],
+            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["BrowserModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormsModule"],
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__["NgbModule"],
+        ],
+        exports: [
+            _share_material_share_material_module__WEBPACK_IMPORTED_MODULE_4__["ShareMaterialModule"]
+        ],
+        entryComponents: [
+            _date_picker_and_time_component__WEBPACK_IMPORTED_MODULE_7__["DatePickerAndTimeComponent"],
+        ]
+    })
+], DatePickerAndTimeModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/homepage/homepage.component.css":
+/*!*************************************************!*\
+  !*** ./src/app/homepage/homepage.component.css ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n\n.menuList{\n  float:right;\n  padding: 1%;\n  padding-right: 5%;\n  padding-top: 3%;\n  padding-bottom: 3%;\n  /* background-color: aqua; */\n}\n\n.menuLogo{\n  float: left;\n}\n\n.menuLogo img{\n  height: 100px;\n}\n\n.heroImage{\n  padding-bottom: 2%;\n  text-align: center;\n}\n\n.matGridListProduct{\n  max-width: 1000px;\n  text-align: center;\n}\n\n.matCardImg{\n  max-width: 320px;\n}\n\n.matCardFreebiesImg{\n  max-width: 200px;\n}\n\n.productDiv{\n  max-width: 250px;\n  float: left; padding: 1%;;\n}\n\n.productDiv img {\n  max-height: 168px;\n}\n\n.productDiv div{\n  word-break: break-all;\n  color: grey;\n}\n\n.productTitle {\n  font-weight: 500;\n  font-size: 110%;\n  color:black !important;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZXBhZ2UvaG9tZXBhZ2UuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUVBO0VBQ0UsV0FBVztFQUNYLFdBQVc7RUFDWCxpQkFBaUI7RUFDakIsZUFBZTtFQUNmLGtCQUFrQjtFQUNsQiw0QkFBNEI7QUFDOUI7O0FBRUE7RUFDRSxXQUFXO0FBQ2I7O0FBQ0E7RUFDRSxhQUFhO0FBQ2Y7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsaUJBQWlCO0VBQ2pCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixXQUFXLEVBQUUsV0FBVztBQUMxQjs7QUFDQTtFQUNFLGlCQUFpQjtBQUNuQjs7QUFDQTtFQUNFLHFCQUFxQjtFQUNyQixXQUFXO0FBQ2I7O0FBQ0E7RUFDRSxnQkFBZ0I7RUFDaEIsZUFBZTtFQUNmLHNCQUFzQjtBQUN4QiIsImZpbGUiOiJzcmMvYXBwL2hvbWVwYWdlL2hvbWVwYWdlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcblxuLm1lbnVMaXN0e1xuICBmbG9hdDpyaWdodDtcbiAgcGFkZGluZzogMSU7XG4gIHBhZGRpbmctcmlnaHQ6IDUlO1xuICBwYWRkaW5nLXRvcDogMyU7XG4gIHBhZGRpbmctYm90dG9tOiAzJTtcbiAgLyogYmFja2dyb3VuZC1jb2xvcjogYXF1YTsgKi9cbn1cblxuLm1lbnVMb2dve1xuICBmbG9hdDogbGVmdDtcbn1cbi5tZW51TG9nbyBpbWd7XG4gIGhlaWdodDogMTAwcHg7XG59XG5cbi5oZXJvSW1hZ2V7XG4gIHBhZGRpbmctYm90dG9tOiAyJTtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4ubWF0R3JpZExpc3RQcm9kdWN0e1xuICBtYXgtd2lkdGg6IDEwMDBweDtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4ubWF0Q2FyZEltZ3tcbiAgbWF4LXdpZHRoOiAzMjBweDtcbn1cblxuLm1hdENhcmRGcmVlYmllc0ltZ3tcbiAgbWF4LXdpZHRoOiAyMDBweDtcbn1cblxuLnByb2R1Y3REaXZ7XG4gIG1heC13aWR0aDogMjUwcHg7XG4gIGZsb2F0OiBsZWZ0OyBwYWRkaW5nOiAxJTs7XG59XG4ucHJvZHVjdERpdiBpbWcge1xuICBtYXgtaGVpZ2h0OiAxNjhweDtcbn1cbi5wcm9kdWN0RGl2IGRpdntcbiAgd29yZC1icmVhazogYnJlYWstYWxsO1xuICBjb2xvcjogZ3JleTtcbn1cbi5wcm9kdWN0VGl0bGUge1xuICBmb250LXdlaWdodDogNTAwO1xuICBmb250LXNpemU6IDExMCU7XG4gIGNvbG9yOmJsYWNrICFpbXBvcnRhbnQ7XG59XG4iXX0= */");
+
+/***/ }),
+
+/***/ "./src/app/homepage/homepage.component.ts":
+/*!************************************************!*\
+  !*** ./src/app/homepage/homepage.component.ts ***!
+  \************************************************/
+/*! exports provided: HomepageComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomepageComponent", function() { return HomepageComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./menu */ "./src/app/homepage/menu.ts");
+
+
+
+let HomepageComponent = class HomepageComponent {
+    constructor() {
+        this.modulesList = _menu__WEBPACK_IMPORTED_MODULE_2__["ModulesList"];
+        this.getAllImagePath();
+    }
+    ngOnInit() {
+    }
+    getAllImagePath() {
+        this.imagePath = 'assets/images/boxing-glove-icon.jpg';
+        this.hero = 'assets/images/boxing_header.jpg';
+        this.productPath1 = 'assets/images/glove01.jpg';
+        this.productPath2 = 'assets/images/protective01.jpg';
+        this.freebies1 = 'assets/images/freebies1.jpg';
+        this.freebies2 = 'assets/images/freebies2.jpg';
+        this.freebies3 = 'assets/images/freebies3.jpg';
+        this.freebies4 = 'assets/images/freebies4.jpg';
+    }
+    getHero() {
+        return this.hero;
+    }
+};
+HomepageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-homepage',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./homepage.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/homepage/homepage.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./homepage.component.css */ "./src/app/homepage/homepage.component.css")).default]
+    })
+], HomepageComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/homepage/homepage.module.ts":
+/*!*********************************************!*\
+  !*** ./src/app/homepage/homepage.module.ts ***!
+  \*********************************************/
+/*! exports provided: HomepageModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomepageModule", function() { return HomepageModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+/* harmony import */ var _share_material_share_material_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../share-material/share-material.module */ "./src/app/share-material/share-material.module.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
+
+
+
+
+
+
+let HomepageModule = class HomepageModule {
+};
+HomepageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        declarations: [],
+        imports: [
+            _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+            _share_material_share_material_module__WEBPACK_IMPORTED_MODULE_3__["ShareMaterialModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__["NgbModule"]
+        ],
+        exports: [
+            _share_material_share_material_module__WEBPACK_IMPORTED_MODULE_3__["ShareMaterialModule"]
+        ],
+    })
+], HomepageModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/homepage/menu.ts":
+/*!**********************************!*\
+  !*** ./src/app/homepage/menu.ts ***!
+  \**********************************/
+/*! exports provided: ModulesList */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ModulesList", function() { return ModulesList; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+
+const ModulesList = [{
+        label: 'User',
+        children: [{
+                label: 'User 1',
+                children: [{
+                        label: 'User 5'
+                    }, {
+                        label: 'User 6'
+                    }, {
+                        label: 'User 7'
+                    }]
+            }, {
+                label: 'User 2',
+                children: [{
+                        label: 'User 8'
+                    }, {
+                        label: 'User 9'
+                    }, {
+                        label: 'User 10'
+                    }]
+            }, {
+                label: 'User 3'
+            }, {
+                label: 'User 4'
+            }]
+    }, {
+        label: 'Management',
+        children: [{
+                label: 'Management 1',
+                children: [{
+                        label: 'Management 2'
+                    }, {
+                        label: 'Management 3'
+                    }, {
+                        label: 'Management 4'
+                    }]
+            }]
+    }, {
+        label: 'Admin',
+        children: [{
+                label: 'Admin 1'
+            }, {
+                label: 'Admin 2'
+            }, {
+                label: 'Admin 3'
+            }, {
+                label: 'Admin 4'
+            }]
+    }];
 
 
 /***/ }),
@@ -418,7 +750,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".layout {\n  display: -webkit-box;\n  display: flex;-webkit-box-align: center;align-items: center;margin: auto;-webkit-box-orient: vertical;-webkit-box-direction: normal;flex-direction: column;height: 100vh;-webkit-box-pack: center;justify-content: center;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2VhcmNoLWJhci9zZWFyY2gtYmFyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxvQkFBYTtFQUFiLGFBQWEsQ0FBQyx5QkFBbUIsQ0FBbkIsbUJBQW1CLENBQUMsWUFBWSxDQUFDLDRCQUFzQixDQUF0Qiw2QkFBc0IsQ0FBdEIsc0JBQXNCLENBQUMsYUFBYSxDQUFDLHdCQUF1QixDQUF2Qix1QkFBdUI7QUFDN0ciLCJmaWxlIjoic3JjL2FwcC9zZWFyY2gtYmFyL3NlYXJjaC1iYXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5sYXlvdXQge1xuICBkaXNwbGF5OiBmbGV4O2FsaWduLWl0ZW1zOiBjZW50ZXI7bWFyZ2luOiBhdXRvO2ZsZXgtZGlyZWN0aW9uOiBjb2x1bW47aGVpZ2h0OiAxMDB2aDtqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbn1cbiJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("#searchBarLayout {\n  width: 300px;\n  max-height: 300px;\n  /* position: relative;\n  top: 50%;\n  left: 50%;\n  margin: -150px 0 0 -150px; */\n}\n\n#searchBarOtherConditionsLayout {\n  width: 300px;\n  height: 114px;\n  padding-top: 17%;\n  /* position: relative;\n  top: 50%;\n  left: 50%;\n  margin: -150px 0 0 -150px; */\n}\n\n#searchBarOpenDialogLayout {\n  background-color: blanchedalmond;\n  max-width:80px ;\n  padding-left: 9%;\n\n  /* position: relative;\n  height: 114px;\n  max-width: 300px;\n  top: 50%;\n  left: 50%;\n  margin: -150px 0 0 -150px; */\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2VhcmNoLWJhci9zZWFyY2gtYmFyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFZO0VBQ1osaUJBQWlCO0VBQ2pCOzs7OEJBRzRCO0FBQzlCOztBQUVBO0VBQ0UsWUFBWTtFQUNaLGFBQWE7RUFDYixnQkFBZ0I7RUFDaEI7Ozs4QkFHNEI7QUFDOUI7O0FBQ0E7RUFDRSxnQ0FBZ0M7RUFDaEMsZUFBZTtFQUNmLGdCQUFnQjs7RUFFaEI7Ozs7OzhCQUs0QjtBQUM5QiIsImZpbGUiOiJzcmMvYXBwL3NlYXJjaC1iYXIvc2VhcmNoLWJhci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiI3NlYXJjaEJhckxheW91dCB7XG4gIHdpZHRoOiAzMDBweDtcbiAgbWF4LWhlaWdodDogMzAwcHg7XG4gIC8qIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgdG9wOiA1MCU7XG4gIGxlZnQ6IDUwJTtcbiAgbWFyZ2luOiAtMTUwcHggMCAwIC0xNTBweDsgKi9cbn1cblxuI3NlYXJjaEJhck90aGVyQ29uZGl0aW9uc0xheW91dCB7XG4gIHdpZHRoOiAzMDBweDtcbiAgaGVpZ2h0OiAxMTRweDtcbiAgcGFkZGluZy10b3A6IDE3JTtcbiAgLyogcG9zaXRpb246IHJlbGF0aXZlO1xuICB0b3A6IDUwJTtcbiAgbGVmdDogNTAlO1xuICBtYXJnaW46IC0xNTBweCAwIDAgLTE1MHB4OyAqL1xufVxuI3NlYXJjaEJhck9wZW5EaWFsb2dMYXlvdXQge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBibGFuY2hlZGFsbW9uZDtcbiAgbWF4LXdpZHRoOjgwcHggO1xuICBwYWRkaW5nLWxlZnQ6IDklO1xuXG4gIC8qIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgaGVpZ2h0OiAxMTRweDtcbiAgbWF4LXdpZHRoOiAzMDBweDtcbiAgdG9wOiA1MCU7XG4gIGxlZnQ6IDUwJTtcbiAgbWFyZ2luOiAtMTUwcHggMCAwIC0xNTBweDsgKi9cbn1cbiJdfQ== */");
 
 /***/ }),
 
@@ -435,11 +767,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+/* harmony import */ var _date_picker_and_time_date_picker_and_time_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../date-picker-and-time/date-picker-and-time.component */ "./src/app/date-picker-and-time/date-picker-and-time.component.ts");
+
+
 
 
 
 let SearchBarComponent = class SearchBarComponent {
-    constructor(fb) {
+    constructor(fb, dialog) {
+        this.dialog = dialog;
         this.value = '';
         this.options = fb.group({
             menuCodeControl: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
@@ -451,9 +788,21 @@ let SearchBarComponent = class SearchBarComponent {
         this.preFee = false;
         this.menuCode = this.options.controls.menuCodeControl.value;
     }
+    openDateTimeDialog() {
+        const dialogRef = this.dialog.open(_date_picker_and_time_date_picker_and_time_component__WEBPACK_IMPORTED_MODULE_4__["DatePickerAndTimeComponent"], {
+            width: '500px',
+            data: { hourNumber: this.hourNumber, minNumber: this.minNumber }
+        });
+        dialogRef.afterClosed().subscribe(result => {
+            console.log('The dialog was closed');
+            this.minNumber = result.minNumber;
+            this.hourNumber = result.hourNumber;
+        });
+    }
 };
 SearchBarComponent.ctorParameters = () => [
-    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] }
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatDialog"] }
 ];
 SearchBarComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
