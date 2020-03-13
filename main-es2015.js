@@ -49,6 +49,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/follow-dialog/follow-dialog.component.html":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/follow-dialog/follow-dialog.component.html ***!
+  \**************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"closeDialog\">\n  <mat-icon (click)=\"closeDialog()\">close</mat-icon>\n</div>\n<h2 mat-dialog-title>Subscribe Email</h2>\n<div>\n  <p>Yes, share with me the arcane knowledge of the geometers and architects.</p>\n</div>\n<div>\n  <form class=\"example-form\">\n    <mat-form-field class=\"example-full-width\">\n      <mat-label> </mat-label>\n      <input matInput [formControl]=\"emailFormControl\" [errorStateMatcher]=\"matcher\" placeholder=\"Ex. pat@example.com\">\n      <mat-hint>Errors appear instantly!</mat-hint>\n      <mat-error *ngIf=\"emailFormControl.hasError('email') && !emailFormControl.hasError('required')\">\n        Please enter a valid email address\n      </mat-error>\n      <mat-error *ngIf=\"emailFormControl.hasError('required')\">\n        Email is <strong>required</strong>\n      </mat-error>\n    </mat-form-field>\n  </form>\n</div>\n<div style=\"padding-top: 2%;text-align: center;\">\n  <button mat-raised-button (click)=\"checkEmail()\">Subscribe</button>\n</div>\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/homepage/homepage.component.html":
 /*!****************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/homepage/homepage.component.html ***!
@@ -58,7 +71,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<body>\n  <!-- START:上方：靠左：Logo -->\n  <div class=\"menuLogo\">\n    <img [src]=\"imagePath\">\n  </div>\n  <!-- END:上方：靠左：Logo -->\n\n\n  <!-- START:上方：靠右：下拉選單 -->\n  <div class=\"menuList\">\n    <ng-container *ngFor=\"let menuItem of modulesList\">\n      <ng-container *ngIf=\"!menuItem.children\">\n        <a class=\"nav-link\">\n          <span class=\"icon fa\" [ngClass]=\"menuItem.icon\"></span>\n          <span class=\"text-holder\">{{menuItem.label}}</span>\n        </a>\n      </ng-container>\n      <ng-container *ngIf=\"menuItem.children.length > 0\">\n        <button mat-button [matMenuTriggerFor]=\"levelOne\" #levelOneTrigger=\"matMenuTrigger\">\n          <span class=\"icon fa\" [ngClass]=\"menuItem.icon\"></span>\n          <span>{{menuItem.label}}\n            <i class=\"fa fa-chevron-down\"></i>\n          </span>\n        </button>\n\n        <mat-menu #levelOne=\"matMenu\" direction=\"down\" yPosition=\"below\">\n          <span>\n            <ng-container *ngFor=\"let childL1 of menuItem.children\">\n              <li class=\"p-0\" *ngIf=\"!childL1.children\" mat-menu-item>\n                <a class=\"nav-link\">{{childL1.label}}\n                  <i *ngIf=\"childL1.icon\" [ngClass]=\"childL1.icon\"></i>\n                </a>\n              </li>\n              <ng-container *ngIf=\"childL1.children && childL1.children.length > 0\">\n                <li mat-menu-item [matMenuTriggerFor]=\"levelTwo\">\n                  <span class=\"icon fa\" [ngClass]=\"childL1.icon\"></span>\n                  <span>{{childL1.label}}</span>\n                </li>\n\n                <mat-menu #levelTwo=\"matMenu\">\n                  <ng-container *ngFor=\"let childL2 of childL1.children\">\n                    <li class=\"p-0\" mat-menu-item>\n                      <a class=\"nav-link\">{{childL2.label}}\n                        <i *ngIf=\"childL2.icon\" [ngClass]=\"childL2.icon\"></i>\n                      </a>\n                    </li>\n                  </ng-container>\n                </mat-menu>\n              </ng-container>\n            </ng-container>\n          </span>\n        </mat-menu>\n      </ng-container>\n    </ng-container>\n  </div>\n  <!-- END:上方：靠右：下拉選單 -->\n\n  <!-- START: header: HERO-IMAGE -->\n  <div class=\"heroImage\">\n    <img [src]=\"getHero()\">\n  </div>\n  <!-- END: header: HERO-IMAGE -->\n\n  <!-- START : Products banner -->\n  <div style=\"padding-left: 5%;\">\n    <h3>Products</h3>\n    <mat-grid-list cols=\"2\" class=\"matGridListProduct\">\n      <mat-grid-tile>\n        <mat-card style=\"width: 95%;max-width: 95%;\">\n          <img mat-card-image [src]=\"productPath1\" class=\"matCardImg\" rowspan=\"1\">\n          <mat-card-header style=\"text-align: left;\">\n            <mat-card-title style=\"font-weight: 400 !important ; color:rgb(196, 33, 33) ;\">Gloves</mat-card-title>\n            <mat-card-subtitle>From design to performance, color to construction or fit to feel.</mat-card-subtitle>\n            <mat-card-subtitle>from £40</mat-card-subtitle>\n          </mat-card-header>\n          <mat-card-actions>\n            <button mat-button>Buy Now!</button>\n          </mat-card-actions>\n        </mat-card>\n      </mat-grid-tile>\n      <mat-grid-tile>\n        <mat-card style=\"width: 95%;max-width: 95%;\">\n          <img mat-card-image [src]=\"productPath2\" class=\"matCardImg\" rowspan=\"1\">\n          <mat-card-header style=\"text-align: left;\">\n            <mat-card-title style=\"font-weight: 400 !important ; color:rgb(196, 33, 33) ;\">Protectives</mat-card-title>\n            <mat-card-subtitle>“Protect yourselves at all times”.</mat-card-subtitle>\n            <mat-card-subtitle>from £69</mat-card-subtitle>\n          </mat-card-header>\n          <mat-card-actions>\n            <button mat-button>Buy Now!</button>\n          </mat-card-actions>\n        </mat-card>\n      </mat-grid-tile>\n    </mat-grid-list>\n    <!-- END : Products banner -->\n    <br>\n    <!-- START : Freebies banner -->\n    <div>\n      <h3>Freebies</h3>\n      <div class=\"productDiv\">\n        <!-- 商品圖片 -->\n        <div style=\"text-align: center;\">\n          <img [src]=\"freebies1\">\n        </div>\n        <!-- 商品標題 -->\n        <div class=\"productTitle\">\n          <a>Keyring</a>\n        </div>\n        <!-- 商品副標題 -->\n        <div>\n          <p>Incredible, flexible industrial rubber keyring is die-cut and stamped for authenticity and quality.</p>\n        </div>\n      </div>\n\n      <div class=\"productDiv\">\n        <!-- 商品圖片 -->\n        <div style=\"text-align: center;\">\n          <img [src]=\"freebies2\">\n        </div>\n        <!-- 商品標題 -->\n        <div class=\"productTitle\">\n          <a>Rope skipping</a>\n        </div>\n        <!-- 商品副標題 -->\n        <div>\n          <p>Super fast ball bearing swivels provide tangle-free, quick action.Weighted handles can be removed, allowing\n            you to vary your workouts.</p>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"productDiv\">\n      <!-- 商品圖片 -->\n      <div style=\"text-align: center;\">\n        <img [src]=\"freebies3\">\n      </div>\n      <!-- 商品標題 -->\n      <div class=\"productTitle\">\n        <a>Hand wraps</a>\n      </div>\n      <!-- 商品副標題 -->\n      <div>\n        <p>Just like fighters vary in size, weight and the amount of protection you need, what’s also unique is the size\n          of their hands.</p>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"productDiv\">\n    <!-- 商品圖片 -->\n    <div style=\"text-align: center;\">\n      <img [src]=\"freebies4\">\n    </div>\n    <!-- 商品標題 -->\n    <div class=\"productTitle\">\n      <a>Puzzle Sports Mat</a>\n    </div>\n    <!-- 商品副標題 -->\n    <div>\n      <p>Ideal and most convenient option for lining gym floors, schools, studios, workout and exercise rooms, weight\n        training areas, around heavy bags, boxing rings, cages...</p>\n    </div>\n\n  </div>\n  <!-- END : Freebies banner -->\n\n\n  <div style='clear:both;'></div>\n  <div style=\"background-color:  #e2e2e2;\">\n    <div style=\"height: 40px;\"></div>\n    <div style=\"text-align:center; font-style: italic;\">\n      Copyright © 2020 Boxing Lin Inc\n    </div>\n    <div style=\"height: 20px;\"></div>\n  </div>\n</body>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<body>\n  <!-- START:上方：靠左：Logo -->\n  <div class=\"menuLogo\">\n    <img [src]=\"imagePath\">\n  </div>\n  <!-- END:上方：靠左：Logo -->\n\n\n  <!-- START:上方：靠右：下拉選單 -->\n  <div class=\"menuList\">\n    <!-- <ng-container *ngFor=\"let menuItem of modulesList\">\n      <ng-container *ngIf=\"!menuItem.children\">\n        <a class=\"nav-link\">\n          <span class=\"icon fa\" [ngClass]=\"menuItem.icon\"></span>\n          <span class=\"text-holder\">{{menuItem.label}}</span>\n        </a>\n      </ng-container>\n      <ng-container *ngIf=\"menuItem.children.length > 0\">\n        <button mat-button [matMenuTriggerFor]=\"levelOne\" #levelOneTrigger=\"matMenuTrigger\">\n          <span class=\"icon fa\" [ngClass]=\"menuItem.icon\"></span>\n          <span>{{menuItem.label}}\n            <i class=\"fa fa-chevron-down\"></i>\n          </span>\n        </button>\n\n        <mat-menu #levelOne=\"matMenu\" direction=\"down\" yPosition=\"below\">\n          <span>\n            <ng-container *ngFor=\"let childL1 of menuItem.children\">\n              <li class=\"p-0\" *ngIf=\"!childL1.children\" mat-menu-item>\n                <a class=\"nav-link\">{{childL1.label}}\n                  <i *ngIf=\"childL1.icon\" [ngClass]=\"childL1.icon\"></i>\n                </a>\n              </li>\n              <ng-container *ngIf=\"childL1.children && childL1.children.length > 0\">\n                <li mat-menu-item [matMenuTriggerFor]=\"levelTwo\">\n                  <span class=\"icon fa\" [ngClass]=\"childL1.icon\"></span>\n                  <span>{{childL1.label}}</span>\n                </li>\n\n                <mat-menu #levelTwo=\"matMenu\">\n                  <ng-container *ngFor=\"let childL2 of childL1.children\">\n                    <li class=\"p-0\" mat-menu-item>\n                      <a class=\"nav-link\">{{childL2.label}}\n                        <i *ngIf=\"childL2.icon\" [ngClass]=\"childL2.icon\"></i>\n                      </a>\n                    </li>\n                  </ng-container>\n                </mat-menu>\n              </ng-container>\n            </ng-container>\n          </span>\n        </mat-menu>\n      </ng-container>\n    </ng-container> -->\n  </div>\n  <!-- END:上方：靠右：下拉選單 -->\n\n  <!-- START: header: HERO-IMAGE -->\n  <div class=\"heroImage\">\n    <img [src]=\"getHero()\">\n  </div>\n  <!-- END: header: HERO-IMAGE -->\n\n  <!-- START : Products banner -->\n  <div style=\"padding-left: 5%;\">\n    <h3>Products</h3>\n    <mat-grid-list cols=\"2\" class=\"matGridListProduct\">\n      <mat-grid-tile>\n        <mat-card style=\"width: 95%;max-width: 95%;\">\n          <img mat-card-image [src]=\"productPath1\" class=\"matCardImg\" rowspan=\"1\">\n          <mat-card-header style=\"text-align: left;\">\n            <mat-card-title style=\"font-weight: 400 !important ; color:rgb(196, 33, 33) ;\">Gloves</mat-card-title>\n            <mat-card-subtitle>From design to performance, color to construction or fit to feel.</mat-card-subtitle>\n            <mat-card-subtitle>from £40</mat-card-subtitle>\n          </mat-card-header>\n          <mat-card-actions>\n            <button mat-raised-button>Buy Now!</button>\n          </mat-card-actions>\n        </mat-card>\n      </mat-grid-tile>\n      <mat-grid-tile>\n        <mat-card style=\"width: 95%;max-width: 95%;\">\n          <img mat-card-image [src]=\"productPath2\" class=\"matCardImg\" rowspan=\"1\">\n          <mat-card-header style=\"text-align: left;\">\n            <mat-card-title style=\"font-weight: 400 !important ; color:rgb(196, 33, 33) ;\">Protectives</mat-card-title>\n            <mat-card-subtitle>“Protect yourselves at all times”.</mat-card-subtitle>\n            <mat-card-subtitle>from £69</mat-card-subtitle>\n          </mat-card-header>\n          <mat-card-actions>\n            <button mat-raised-button>Buy Now!</button>\n          </mat-card-actions>\n        </mat-card>\n      </mat-grid-tile>\n    </mat-grid-list>\n    <!-- END : Products banner -->\n    <br>\n    <!-- START : Freebies banner -->\n    <div>\n      <h3>Freebies</h3>\n      <div class=\"productDiv\">\n        <!-- 商品圖片 -->\n        <div style=\"text-align: center;\">\n          <img [src]=\"freebies1\">\n        </div>\n        <!-- 商品標題 -->\n        <div class=\"productTitle\">\n          <a>Keyring</a>\n        </div>\n        <!-- 商品副標題 -->\n        <div>\n          <p>Incredible, flexible industrial rubber keyring is die-cut and stamped for authenticity and quality.</p>\n        </div>\n      </div>\n\n      <div class=\"productDiv\">\n        <!-- 商品圖片 -->\n        <div style=\"text-align: center;\">\n          <img [src]=\"freebies2\">\n        </div>\n        <!-- 商品標題 -->\n        <div class=\"productTitle\">\n          <a>Rope skipping</a>\n        </div>\n        <!-- 商品副標題 -->\n        <div>\n          <p>Super fast ball bearing swivels provide tangle-free, quick action.Weighted handles can be removed, allowing\n            you to vary your workouts.</p>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"productDiv\">\n      <!-- 商品圖片 -->\n      <div style=\"text-align: center;\">\n        <img [src]=\"freebies3\">\n      </div>\n      <!-- 商品標題 -->\n      <div class=\"productTitle\">\n        <a>Hand wraps</a>\n      </div>\n      <!-- 商品副標題 -->\n      <div>\n        <p>Just like fighters vary in size, weight and the amount of protection you need, what’s also unique is the size\n          of their hands.</p>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"productDiv\">\n    <!-- 商品圖片 -->\n    <div style=\"text-align: center;\">\n      <img [src]=\"freebies4\">\n    </div>\n    <!-- 商品標題 -->\n    <div class=\"productTitle\">\n      <a>Puzzle Sports Mat</a>\n    </div>\n    <!-- 商品副標題 -->\n    <div>\n      <p>Ideal and most convenient option for lining gym floors, schools, studios, workout and exercise rooms, weight\n        training areas, around heavy bags, boxing rings, cages...</p>\n    </div>\n\n  </div>\n  <!-- END : Freebies banner -->\n\n  <div style='clear:both;'></div>\n  <!-- START: contact info -->\n  <div style=\"padding-top: 2%;\">\n    <div class=\"contactDiv\">\n      <div style=\"text-align: center;height: 40%;font-weight: 500; \">\n        INFO\n      </div>\n      <div style=\"padding-left: 3%;\">\n        <div>\n          Tools to aid in motion design. Battle Axe is the life’s work of Adam Plouff.\n        </div>\n        <div style=\"text-decoration-line: underline;\">\n          <p (click)=\"openMore()\">More →</p>\n          <!--跳轉頁面  -->\n        </div>\n      </div>\n    </div>\n\n    <div class=\"contactDivMid\">\n      <div style=\"text-align: center; height: 40%;font-weight: 500;\">\n        EMAIL UPDATES\n      </div>\n      <div style=\"text-align: center;\">\n        <button mat-raised-button style=\"width: 60%; height: 40%;\" (click)=\"openFollowDialog()\">FOLLOW</button>\n        <!--dialog  -->\n      </div>\n    </div>\n\n    <div class=\"contactDiv\">\n      <div style=\"text-align: center; height: 50%;font-weight: 500;\">\n        BE FRIENDS\n      </div>\n      <div class=\"iconDiv\">\n        <!--dialog  -->\n        <div>\n          <a (click)=\"goToLink('http://www.instagram.com')\"><img [src]=\"friendIcon1\"></a>\n          <a (click)=\"goToLink('http://www.github.com')\"><img [src]=\"friendIcon2\"></a>\n          <a (click)=\"goToLink('http://www.youtube.com')\"><img [src]=\"friendIcon3\"></a>\n          <a (click)=\"goToLink('http://www.facebook.com')\"><img [src]=\"friendIcon4\"></a>\n          <a (click)=\"goToLink('http://www.medium.com')\"><img [src]=\"friendIcon5\"></a>\n        </div>\n      </div>\n    </div>\n  </div>\n  <!-- END: contact info -->\n\n  <!-- START: footer -->\n  <div style='clear:both;'></div>\n  <div style=\"background-color:  #e2e2e2;\">\n    <div style=\"height: 50px;\"></div>\n    <div style=\"text-align:center; font-style: italic;\">\n      {{copyRight}}\n    </div>\n    <div style=\"height: 40px;\"></div>\n  </div>\n  <!-- END: footer -->\n</body>\n");
 
 /***/ }),
 
@@ -410,6 +423,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
 /* harmony import */ var _homepage_homepage_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./homepage/homepage.component */ "./src/app/homepage/homepage.component.ts");
 /* harmony import */ var _homepage_homepage_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./homepage/homepage.module */ "./src/app/homepage/homepage.module.ts");
+/* harmony import */ var _follow_dialog_follow_dialog_module__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./follow-dialog/follow-dialog.module */ "./src/app/follow-dialog/follow-dialog.module.ts");
+
 
 
 
@@ -431,7 +446,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
             _search_bar_search_bar_component__WEBPACK_IMPORTED_MODULE_5__["SearchBarComponent"],
             _date_picker_and_time_date_picker_and_time_component__WEBPACK_IMPORTED_MODULE_9__["DatePickerAndTimeComponent"],
-            _homepage_homepage_component__WEBPACK_IMPORTED_MODULE_11__["HomepageComponent"]
+            _homepage_homepage_component__WEBPACK_IMPORTED_MODULE_11__["HomepageComponent"],
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -440,7 +455,8 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _date_picker_and_time_date_picker_and_time_module__WEBPACK_IMPORTED_MODULE_8__["DatePickerAndTimeModule"],
             _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModule"],
             _angular_material__WEBPACK_IMPORTED_MODULE_10__["MatDialogModule"],
-            _homepage_homepage_module__WEBPACK_IMPORTED_MODULE_12__["HomepageModule"]
+            _homepage_homepage_module__WEBPACK_IMPORTED_MODULE_12__["HomepageModule"],
+            _follow_dialog_follow_dialog_module__WEBPACK_IMPORTED_MODULE_13__["FollowDialogModule"]
         ],
         providers: [],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
@@ -571,6 +587,124 @@ DatePickerAndTimeModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/follow-dialog/follow-dialog.component.css":
+/*!***********************************************************!*\
+  !*** ./src/app/follow-dialog/follow-dialog.component.css ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n\n.closeDialog{\n  float: right;\n}\n\n.closeDialog mat-icon:hover{\n  cursor: pointer;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZm9sbG93LWRpYWxvZy9mb2xsb3ctZGlhbG9nLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxnQkFBZ0I7RUFDaEIsZ0JBQWdCO0VBQ2hCLFdBQVc7QUFDYjs7QUFFQTtFQUNFLFdBQVc7QUFDYjs7QUFFQTtFQUNFLFlBQVk7QUFDZDs7QUFDQTtFQUNFLGVBQWU7QUFDakIiLCJmaWxlIjoic3JjL2FwcC9mb2xsb3ctZGlhbG9nL2ZvbGxvdy1kaWFsb2cuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5leGFtcGxlLWZvcm0ge1xuICBtaW4td2lkdGg6IDE1MHB4O1xuICBtYXgtd2lkdGg6IDUwMHB4O1xuICB3aWR0aDogMTAwJTtcbn1cblxuLmV4YW1wbGUtZnVsbC13aWR0aCB7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG4uY2xvc2VEaWFsb2d7XG4gIGZsb2F0OiByaWdodDtcbn1cbi5jbG9zZURpYWxvZyBtYXQtaWNvbjpob3ZlcntcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuIl19 */");
+
+/***/ }),
+
+/***/ "./src/app/follow-dialog/follow-dialog.component.ts":
+/*!**********************************************************!*\
+  !*** ./src/app/follow-dialog/follow-dialog.component.ts ***!
+  \**********************************************************/
+/*! exports provided: MyErrorStateMatcher, FollowDialogComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyErrorStateMatcher", function() { return MyErrorStateMatcher; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FollowDialogComponent", function() { return FollowDialogComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+
+
+
+
+class MyErrorStateMatcher {
+    isErrorState(control, form) {
+        const isSubmitted = form && form.submitted;
+        return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+    }
+}
+let FollowDialogComponent = class FollowDialogComponent {
+    constructor(dialogRef, data) {
+        this.dialogRef = dialogRef;
+        this.data = data;
+        this.emailFormControl = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', [
+            _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required,
+            _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].email,
+        ]);
+        this.matcher = new MyErrorStateMatcher();
+    }
+    ngOnInit() {
+    }
+    closeDialog() {
+        this.dialogRef.close();
+    }
+    checkEmail() {
+        console.log('call checkEmail');
+        console.log(this.emailFormControl);
+        if (this.emailFormControl.value !== undefined && this.emailFormControl.value) {
+            console.log('can close:' + this.emailFormControl.value);
+        }
+        else {
+            alert('Please enter correct Email');
+        }
+    }
+};
+FollowDialogComponent.ctorParameters = () => [
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatDialogRef"] },
+    { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_material__WEBPACK_IMPORTED_MODULE_3__["MAT_DIALOG_DATA"],] }] }
+];
+FollowDialogComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-follow-dialog',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./follow-dialog.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/follow-dialog/follow-dialog.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./follow-dialog.component.css */ "./src/app/follow-dialog/follow-dialog.component.css")).default]
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_3__["MAT_DIALOG_DATA"]))
+], FollowDialogComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/follow-dialog/follow-dialog.module.ts":
+/*!*******************************************************!*\
+  !*** ./src/app/follow-dialog/follow-dialog.module.ts ***!
+  \*******************************************************/
+/*! exports provided: FollowDialogModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FollowDialogModule", function() { return FollowDialogModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+/* harmony import */ var _share_material_share_material_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../share-material/share-material.module */ "./src/app/share-material/share-material.module.ts");
+
+
+
+
+let FollowDialogModule = class FollowDialogModule {
+};
+FollowDialogModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        declarations: [],
+        imports: [
+            _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+            _share_material_share_material_module__WEBPACK_IMPORTED_MODULE_3__["ShareMaterialModule"],
+        ],
+        exports: [
+            _share_material_share_material_module__WEBPACK_IMPORTED_MODULE_3__["ShareMaterialModule"]
+        ],
+    })
+], FollowDialogModule);
+
+
+
+/***/ }),
+
 /***/ "./src/app/homepage/homepage.component.css":
 /*!*************************************************!*\
   !*** ./src/app/homepage/homepage.component.css ***!
@@ -580,7 +714,7 @@ DatePickerAndTimeModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n\n.menuList{\n  float:right;\n  padding: 1%;\n  padding-right: 5%;\n  padding-top: 3%;\n  padding-bottom: 3%;\n  /* background-color: aqua; */\n}\n\n.menuLogo{\n  float: left;\n}\n\n.menuLogo img{\n  height: 100px;\n}\n\n.heroImage{\n  padding-bottom: 2%;\n  text-align: center;\n}\n\n.matGridListProduct{\n  max-width: 1000px;\n  text-align: center;\n}\n\n.matCardImg{\n  max-width: 320px;\n}\n\n.matCardFreebiesImg{\n  max-width: 200px;\n}\n\n.productDiv{\n  max-width: 250px;\n  float: left; padding: 1%;;\n}\n\n.productDiv img {\n  max-height: 168px;\n}\n\n.productDiv div{\n  word-break: break-all;\n  color: grey;\n}\n\n.productTitle {\n  font-weight: 500;\n  font-size: 110%;\n  color:black !important;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZXBhZ2UvaG9tZXBhZ2UuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUVBO0VBQ0UsV0FBVztFQUNYLFdBQVc7RUFDWCxpQkFBaUI7RUFDakIsZUFBZTtFQUNmLGtCQUFrQjtFQUNsQiw0QkFBNEI7QUFDOUI7O0FBRUE7RUFDRSxXQUFXO0FBQ2I7O0FBQ0E7RUFDRSxhQUFhO0FBQ2Y7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsaUJBQWlCO0VBQ2pCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixXQUFXLEVBQUUsV0FBVztBQUMxQjs7QUFDQTtFQUNFLGlCQUFpQjtBQUNuQjs7QUFDQTtFQUNFLHFCQUFxQjtFQUNyQixXQUFXO0FBQ2I7O0FBQ0E7RUFDRSxnQkFBZ0I7RUFDaEIsZUFBZTtFQUNmLHNCQUFzQjtBQUN4QiIsImZpbGUiOiJzcmMvYXBwL2hvbWVwYWdlL2hvbWVwYWdlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcblxuLm1lbnVMaXN0e1xuICBmbG9hdDpyaWdodDtcbiAgcGFkZGluZzogMSU7XG4gIHBhZGRpbmctcmlnaHQ6IDUlO1xuICBwYWRkaW5nLXRvcDogMyU7XG4gIHBhZGRpbmctYm90dG9tOiAzJTtcbiAgLyogYmFja2dyb3VuZC1jb2xvcjogYXF1YTsgKi9cbn1cblxuLm1lbnVMb2dve1xuICBmbG9hdDogbGVmdDtcbn1cbi5tZW51TG9nbyBpbWd7XG4gIGhlaWdodDogMTAwcHg7XG59XG5cbi5oZXJvSW1hZ2V7XG4gIHBhZGRpbmctYm90dG9tOiAyJTtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4ubWF0R3JpZExpc3RQcm9kdWN0e1xuICBtYXgtd2lkdGg6IDEwMDBweDtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4ubWF0Q2FyZEltZ3tcbiAgbWF4LXdpZHRoOiAzMjBweDtcbn1cblxuLm1hdENhcmRGcmVlYmllc0ltZ3tcbiAgbWF4LXdpZHRoOiAyMDBweDtcbn1cblxuLnByb2R1Y3REaXZ7XG4gIG1heC13aWR0aDogMjUwcHg7XG4gIGZsb2F0OiBsZWZ0OyBwYWRkaW5nOiAxJTs7XG59XG4ucHJvZHVjdERpdiBpbWcge1xuICBtYXgtaGVpZ2h0OiAxNjhweDtcbn1cbi5wcm9kdWN0RGl2IGRpdntcbiAgd29yZC1icmVhazogYnJlYWstYWxsO1xuICBjb2xvcjogZ3JleTtcbn1cbi5wcm9kdWN0VGl0bGUge1xuICBmb250LXdlaWdodDogNTAwO1xuICBmb250LXNpemU6IDExMCU7XG4gIGNvbG9yOmJsYWNrICFpbXBvcnRhbnQ7XG59XG4iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n\n.menuList{\n  float:right;\n  padding: 1%;\n  padding-right: 5%;\n  padding-top: 3%;\n  padding-bottom: 3%;\n  /* background-color: aqua; */\n}\n\n.menuLogo{\n  float: left;\n}\n\n.menuLogo img{\n  height: 100px;\n}\n\n.heroImage{\n  padding-bottom: 2%;\n  text-align: center;\n}\n\n.matGridListProduct{\n  max-width: 1000px;\n  text-align: center;\n}\n\n.matCardImg{\n  max-width: 320px;\n}\n\n.matCardFreebiesImg{\n  max-width: 200px;\n}\n\n.productDiv{\n  max-width: 250px;\n  float: left;\n  padding: 1%;;\n}\n\n.productDiv img {\n  max-height: 168px;\n}\n\n.productDiv div{\n  word-break: break-all;\n  word-wrap: break-word;\n  color: grey;\n}\n\n.productTitle {\n  font-weight: 500;\n  font-size: 110%;\n  color:black !important;\n}\n\n.iconDiv{\n  text-align: center;\n  cursor: pointer;\n}\n\n.iconDiv img {\n  max-width: 30px;\n  padding: 1%;\n}\n\n.iconDiv img:hover{\n  -webkit-transform: scale(1.4);\n          transform: scale(1.4);\n}\n\n.contactDiv{\n  float: left;\n  width: 33%;\n  padding: 1%;\n  height: 150px;\n}\n\n.contactDiv p:hover{\n  cursor: pointer;\n  -webkit-transform: scale(1.2);\n          transform: scale(1.2);\n  float: left;\n  -webkit-text-decoration-line: underline;\n          text-decoration-line: underline;\n}\n\n.contactDivMid{\n  float: left;\n  width: 34%;\n  padding: 1%;\n  height: 150px;\n\n}\n\n.contactDivMid button:hover{\n  -webkit-transform: scale(1.2);\n          transform: scale(1.2);\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZXBhZ2UvaG9tZXBhZ2UuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUVBO0VBQ0UsV0FBVztFQUNYLFdBQVc7RUFDWCxpQkFBaUI7RUFDakIsZUFBZTtFQUNmLGtCQUFrQjtFQUNsQiw0QkFBNEI7QUFDOUI7O0FBRUE7RUFDRSxXQUFXO0FBQ2I7O0FBQ0E7RUFDRSxhQUFhO0FBQ2Y7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsaUJBQWlCO0VBQ2pCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixXQUFXO0VBQ1gsV0FBVztBQUNiOztBQUNBO0VBQ0UsaUJBQWlCO0FBQ25COztBQUNBO0VBQ0UscUJBQXFCO0VBQ3JCLHFCQUFxQjtFQUNyQixXQUFXO0FBQ2I7O0FBQ0E7RUFDRSxnQkFBZ0I7RUFDaEIsZUFBZTtFQUNmLHNCQUFzQjtBQUN4Qjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixlQUFlO0FBQ2pCOztBQUNBO0VBQ0UsZUFBZTtFQUNmLFdBQVc7QUFDYjs7QUFDQTtFQUNFLDZCQUFxQjtVQUFyQixxQkFBcUI7QUFDdkI7O0FBRUE7RUFDRSxXQUFXO0VBQ1gsVUFBVTtFQUNWLFdBQVc7RUFDWCxhQUFhO0FBQ2Y7O0FBQ0E7RUFDRSxlQUFlO0VBQ2YsNkJBQXFCO1VBQXJCLHFCQUFxQjtFQUNyQixXQUFXO0VBQ1gsdUNBQStCO1VBQS9CLCtCQUErQjtBQUNqQzs7QUFFQTtFQUNFLFdBQVc7RUFDWCxVQUFVO0VBQ1YsV0FBVztFQUNYLGFBQWE7O0FBRWY7O0FBQ0E7RUFDRSw2QkFBcUI7VUFBckIscUJBQXFCO0FBQ3ZCIiwiZmlsZSI6InNyYy9hcHAvaG9tZXBhZ2UvaG9tZXBhZ2UuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuXG4ubWVudUxpc3R7XG4gIGZsb2F0OnJpZ2h0O1xuICBwYWRkaW5nOiAxJTtcbiAgcGFkZGluZy1yaWdodDogNSU7XG4gIHBhZGRpbmctdG9wOiAzJTtcbiAgcGFkZGluZy1ib3R0b206IDMlO1xuICAvKiBiYWNrZ3JvdW5kLWNvbG9yOiBhcXVhOyAqL1xufVxuXG4ubWVudUxvZ297XG4gIGZsb2F0OiBsZWZ0O1xufVxuLm1lbnVMb2dvIGltZ3tcbiAgaGVpZ2h0OiAxMDBweDtcbn1cblxuLmhlcm9JbWFnZXtcbiAgcGFkZGluZy1ib3R0b206IDIlO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbi5tYXRHcmlkTGlzdFByb2R1Y3R7XG4gIG1heC13aWR0aDogMTAwMHB4O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbi5tYXRDYXJkSW1ne1xuICBtYXgtd2lkdGg6IDMyMHB4O1xufVxuXG4ubWF0Q2FyZEZyZWViaWVzSW1ne1xuICBtYXgtd2lkdGg6IDIwMHB4O1xufVxuXG4ucHJvZHVjdERpdntcbiAgbWF4LXdpZHRoOiAyNTBweDtcbiAgZmxvYXQ6IGxlZnQ7XG4gIHBhZGRpbmc6IDElOztcbn1cbi5wcm9kdWN0RGl2IGltZyB7XG4gIG1heC1oZWlnaHQ6IDE2OHB4O1xufVxuLnByb2R1Y3REaXYgZGl2e1xuICB3b3JkLWJyZWFrOiBicmVhay1hbGw7XG4gIHdvcmQtd3JhcDogYnJlYWstd29yZDtcbiAgY29sb3I6IGdyZXk7XG59XG4ucHJvZHVjdFRpdGxlIHtcbiAgZm9udC13ZWlnaHQ6IDUwMDtcbiAgZm9udC1zaXplOiAxMTAlO1xuICBjb2xvcjpibGFjayAhaW1wb3J0YW50O1xufVxuXG4uaWNvbkRpdntcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG4uaWNvbkRpdiBpbWcge1xuICBtYXgtd2lkdGg6IDMwcHg7XG4gIHBhZGRpbmc6IDElO1xufVxuLmljb25EaXYgaW1nOmhvdmVye1xuICB0cmFuc2Zvcm06IHNjYWxlKDEuNCk7XG59XG5cbi5jb250YWN0RGl2e1xuICBmbG9hdDogbGVmdDtcbiAgd2lkdGg6IDMzJTtcbiAgcGFkZGluZzogMSU7XG4gIGhlaWdodDogMTUwcHg7XG59XG4uY29udGFjdERpdiBwOmhvdmVye1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIHRyYW5zZm9ybTogc2NhbGUoMS4yKTtcbiAgZmxvYXQ6IGxlZnQ7XG4gIHRleHQtZGVjb3JhdGlvbi1saW5lOiB1bmRlcmxpbmU7XG59XG5cbi5jb250YWN0RGl2TWlke1xuICBmbG9hdDogbGVmdDtcbiAgd2lkdGg6IDM0JTtcbiAgcGFkZGluZzogMSU7XG4gIGhlaWdodDogMTUwcHg7XG5cbn1cbi5jb250YWN0RGl2TWlkIGJ1dHRvbjpob3ZlcntcbiAgdHJhbnNmb3JtOiBzY2FsZSgxLjIpO1xufVxuIl19 */");
 
 /***/ }),
 
@@ -597,12 +731,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./menu */ "./src/app/homepage/menu.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+/* harmony import */ var _follow_dialog_follow_dialog_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../follow-dialog/follow-dialog.component */ "./src/app/follow-dialog/follow-dialog.component.ts");
+
+
 
 
 
 let HomepageComponent = class HomepageComponent {
-    constructor() {
+    constructor(dialog) {
+        this.dialog = dialog;
         this.modulesList = _menu__WEBPACK_IMPORTED_MODULE_2__["ModulesList"];
+        this.copyRight = 'Copyright © 2020 Boxing Lin Inc';
         this.getAllImagePath();
     }
     ngOnInit() {
@@ -616,11 +756,38 @@ let HomepageComponent = class HomepageComponent {
         this.freebies2 = 'assets/images/freebies2.jpg';
         this.freebies3 = 'assets/images/freebies3.jpg';
         this.freebies4 = 'assets/images/freebies4.jpg';
+        this.friendIcon1 = 'assets/images/instagramIcon.png';
+        this.friendIcon2 = 'assets/images/githubIcon.png';
+        this.friendIcon3 = 'assets/images/youtubeIcon.png';
+        this.friendIcon4 = 'assets/images/facebookIcon.png';
+        this.friendIcon5 = 'assets/images/mediumIcon.png';
     }
     getHero() {
         return this.hero;
     }
+    openFollowDialog() {
+        const dialogRef = this.dialog.open(_follow_dialog_follow_dialog_component__WEBPACK_IMPORTED_MODULE_4__["FollowDialogComponent"], {
+            width: '500px',
+            disableClose: true,
+            data: { emailAddress: this.emailAddress }
+        });
+        dialogRef.afterClosed().subscribe(result => {
+            console.log('The dialog was closed');
+            this.emailAddress = result;
+            console.log(this.emailAddress);
+        });
+    }
+    openMore() {
+        alert('OpenMore');
+    }
+    goToLink(url) {
+        window.open(url, '_blank');
+        console.log(url);
+    }
 };
+HomepageComponent.ctorParameters = () => [
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatDialog"] }
+];
 HomepageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-homepage',
@@ -649,6 +816,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _share_material_share_material_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../share-material/share-material.module */ "./src/app/share-material/share-material.module.ts");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
 /* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
+/* harmony import */ var _follow_dialog_follow_dialog_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../follow-dialog/follow-dialog.component */ "./src/app/follow-dialog/follow-dialog.component.ts");
+
 
 
 
@@ -659,7 +828,9 @@ let HomepageModule = class HomepageModule {
 };
 HomepageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        declarations: [],
+        declarations: [
+            _follow_dialog_follow_dialog_component__WEBPACK_IMPORTED_MODULE_6__["FollowDialogComponent"]
+        ],
         imports: [
             _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
             _share_material_share_material_module__WEBPACK_IMPORTED_MODULE_3__["ShareMaterialModule"],
@@ -669,6 +840,9 @@ HomepageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         exports: [
             _share_material_share_material_module__WEBPACK_IMPORTED_MODULE_3__["ShareMaterialModule"]
         ],
+        entryComponents: [
+            _follow_dialog_follow_dialog_component__WEBPACK_IMPORTED_MODULE_6__["FollowDialogComponent"]
+        ]
     })
 ], HomepageModule);
 
